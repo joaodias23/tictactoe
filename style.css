@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #121212 url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+}
+
+#tictactoe{
+    height: 600px;
+    width: 600px;
+    background: linear-gradient(135deg, #e66465, #9198e5);
+    border-radius: 20px;
+}
+
+h1{
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    background: #ffffff url('https://www.transparenttextures.com/patterns/white-diamond.png');
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #121212;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #dcdcdc;
+    transform: scale(1);
+}
+
+#player-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.player-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+.player-input label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.player-input input {
+    height: 40px;
+    width: 200px;
+    border: 2px solid #9198e5;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #121212;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.player-input input:focus {
+    border-color: #e66465;
+    box-shadow: 0 0 8px rgba(230, 100, 101, 0.8);
+    outline: none;
+}
+
+#start-game {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#start-button {
+    height: 50px;
+    width: 150px;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+#start-button:hover {
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#start-button:active {
+    transform: scale(1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#tictactoe {
+    animation: popup 1s ease-out;
+    box-shadow: 0 0 40px 5px rgba(255, 105, 180, 0.5);
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
